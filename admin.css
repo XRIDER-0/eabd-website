@@ -609,3 +609,91 @@ padding: 20px 0;
         min-width: 0;
     }
 }
+
+/* ================================
+   MOBILE ADMIN FIX
+================================ */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        padding: 20px 15px;
+    }
+
+    .admin-logo {
+        margin-bottom: 25px;
+    }
+
+    .admin-nav {
+        gap: 6px;
+    }
+
+    .admin-nav a {
+        padding: 11px 12px;
+    }
+
+    .dashboard-content {
+        width: 100%;
+        padding: 20px 12px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 26px;
+    }
+
+    .applications-section,
+    .settings-card,
+    .application-details-card,
+    .activity-card {
+        padding: 18px;
+    }
+
+    /* Keep tables scrollable inside their sections */
+    .table-container {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table-container table {
+        min-width: 1000px;
+        width: 1000px;
+    }
+
+    /* Prevent long text from stretching the page */
+    .table-container td,
+    .table-container th {
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    /* Application details */
+    .detail-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .detail-item strong {
+        min-width: 0;
+    }
+
+    .application-details-card .detail-item span {
+        max-width: 100%;
+    }
+
+    .detail-actions {
+        flex-wrap: wrap;
+    }
+
+    /* Recent activity */
+    .dashboard-activity {
+        gap: 15px;
+    }
+
+    .activity-card {
+        width: 100%;
+    }
+
+}
