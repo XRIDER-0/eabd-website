@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Get Support | EABD</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-mark">E</span>
+            <span class="logo-text">EABD</span>
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="index.html#about">About Us</a>
+
+            <a href="index.html#programs">Programs</a>
+
+            <a href="index.html#stories">Stories</a>
+
+            <a href="index.html#contact">Contact</a>
+
+        </nav>
+
+
+        <div class="nav-buttons">
+
+            <a href="get-support.html" class="support-btn">
+                Get Support
+            </a>
+
+            <a href="index.html#get-involved" class="get-started-btn">
+                Get Involved
+            </a>
+
+        </div>
+
+
+        <button class="menu-btn">
+            ☰
+        </button>
+
+    </header>
+
+
+
+    <!-- ================= APPLICATION INTRO ================= -->
+
+    <section class="support-hero">
+
+        <div class="support-intro">
+
+            <span>
+                GET SUPPORT
+            </span>
+
+            <h1>
+                We're here to listen.
+            </h1>
+
+            <p>
+                Tell us a little about yourself and how EABD
+                can support you. Your information will help us
+                understand your needs and connect you with
+                the appropriate opportunities and support.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= APPLICATION FORM ================= -->
+
+    <section class="application-section">
+
+        <div class="application-container">
+
+            <div class="form-heading">
+
+                <span>
+                    SUPPORT APPLICATION
+                </span>
+
+                <h2>
+                    Tell us about yourself
+                </h2>
+
+                <p>
+                    Please provide accurate information so that
+                    we can better understand how to support you.
+                </p>
+
+            </div>
+
+
+
+            <form id="supportForm">
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- AGE -->
+
+                <div class="form-group">
+
+                    <label for="age">
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        name="age"
+                        placeholder="Enter your age"
+                        min="1"
+                        max="120"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- DISABILITY -->
+
+                <div class="form-group">
+
+                    <label for="disability">
+                        What disability or condition do you need support with?
+                    </label>
+
+                    <select
+                        id="disability"
+                        name="disability"
+                        required
+                    >
+
+                        <option value="">
+                            Select an option
+                        </option>
+
+                        <option value="down-syndrome">
+                            Down Syndrome
+                        </option>
+
+                        <option value="physical-disability">
+                            Physical Disability
+                        </option>
+
+                        <option value="visual-disability">
+                            Visual Disability
+                        </option>
+
+                        <option value="hearing-disability">
+                            Hearing Disability
+                        </option>
+
+                        <option value="intellectual-disability">
+                            Intellectual Disability
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                        <option value="prefer-not-to-say">
+                            Prefer not to say
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- SUPPORT NEEDED -->
+
+                <div class="form-group">
+
+                    <label for="supportNeeded">
+                        What kind of support are you looking for?
+                    </label>
+
+                    <select
+                        id="supportNeeded"
+                        name="supportNeeded"
+                        required
+                    >
+
+                        <option value="">
+                            Select an option
+                        </option>
+
+                        <option value="skills-training">
+                            Skills Training
+                        </option>
+
+                        <option value="education">
+                            Education / Learning
+                        </option>
+
+                        <option value="employment">
+                            Employment / Work Opportunities
+                        </option>
+
+                        <option value="talent-development">
+                            Talent Development
+                        </option>
+
+                        <option value="community-support">
+                            Community Support
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Tell us more about what you need
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="7"
+                        placeholder="Tell us about your situation and how you would like EABD to help..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="form-submit"
+                >
+                    Submit Application
+                </button>
+
+
+                <p class="form-note">
+                    Your information will be handled responsibly
+                    and used to understand your support needs.
+                </p>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <span class="logo-mark">
+                        E
+                    </span>
+
+                    <span class="logo-text">
+                        EABD
+                    </span>
+
+                </div>
+
+                <p>
+                    Empowering Ability Beyond Disability.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#about">
+                    About Us
+                </a>
+
+                <a href="index.html#programs">
+                    Programs
+                </a>
+
+                <a href="get-support.html">
+                    Get Support
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 EABD. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+    <script src="support-form.js"></script>
+
+</body>
+
+</html>

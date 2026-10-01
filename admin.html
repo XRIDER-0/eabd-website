@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EABD Admin Dashboard</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="admin-logo">
+                <span class="logo-mark">E</span>
+                <span class="logo-text">EABD</span>
+            </div>
+
+            <nav class="admin-nav">
+
+                <a href="#" class="active" data-section="dashboard">
+                    Dashboard
+                </a>
+
+                <a href="#" data-section="applications">
+                    Applications
+                </a>
+
+                <a href="#" data-section="support">
+                    Support Requests
+                </a>
+
+                <a href="#" data-section="settings">
+                    Settings
+                </a>
+
+            </nav>
+
+
+            <button class="logout-btn">Log Out</button>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="dashboard-content">
+
+            <!-- Top Bar -->
+            <header class="dashboard-header">
+                <div>
+                    <h1>Admin Dashboard</h1>
+                    <p>Welcome back, Admin.</p>
+                </div>
+
+                <button id="refreshDashboardBtn" class="refresh-dashboard-btn">
+                    Refresh Dashboard
+                </button>
+            </header>
+
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <h3>Total Applications</h3>
+                    <p id="totalApplications">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Pending</h3>
+                    <p id="pendingApplications">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Approved</h3>
+                    <p id="approvedApplications">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Rejected</h3>
+                    <p id="rejectedApplications">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Support Requests</h3>
+                    <p id="supportRequests">0</p>
+                </div>
+
+            </section>
+
+<!-- ================= DASHBOARD RECENT ACTIVITY ================= -->
+
+            <section class="dashboard-activity">
+
+                <div class="activity-card">
+
+                    <h2>Recent Applications</h2>
+
+                    <div class="activity-list" id="recentApplications">
+
+                        <p class="activity-empty">
+                            No recent applications.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-card">
+
+                    <h2>Recent Support Requests</h2>
+
+                    <div class="activity-list" id="recentSupportRequests">
+
+                        <p class="activity-empty">
+                            No recent support requests.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+<!-- ================= APPLICATIONS SECTION ================= -->
+
+            <section class="applications-section" id="applicationsSection">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Applications</h2>
+
+                        <p>
+                            View and manage applications submitted through
+                            the Get Support form.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="application-search">
+
+                    <div class="application-search">
+
+                        <input
+                            type="text"
+                            id="applicationSearch"
+                            placeholder="Search applications..."
+                        >
+
+                        <select id="statusFilter">
+
+                            <option value="all">All Statuses</option>
+                            <option value="pending">Pending</option>
+                            <option value="approved">Approved</option>
+                            <option value="rejected">Rejected</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Applications Table -->
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Age</th>
+                                <th>Disability</th>
+                                <th>Support Needed</th>
+                                <th>Message</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="applicationsTableBody">
+
+                            <tr>
+
+                                <td colspan="10" class="empty-message">
+                                    No applications yet.
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- ================= APPLICATION DETAILS ================= -->
+
+            <section class="application-details-section" id="applicationDetailsSection">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Application Details</h2>
+
+                        <p>
+                            View the complete information submitted by the applicant.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="application-details-card" id="applicationDetailsCard">
+
+                    <p class="details-placeholder">
+                        Select an application to view its details.
+                    </p>
+
+                </div>
+
+            </section>
+
+                        </section>
+
+            <!-- ================= SUPPORT REQUESTS SECTION ================= -->
+
+            <section class="support-section" id="supportSection">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Support Requests</h2>
+
+                        <p>
+                            View and manage support requests submitted through the EABD website.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Subject</th>
+                                <th>Message</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="supportRequestsTableBody">
+
+                            <tr>
+
+                                <td colspan="8" class="empty-message">
+                                    No support requests yet.
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- ================= SUPPORT REQUEST DETAILS ================= -->
+
+            <section class="support-request-details-section" id="supportRequestDetailsSection">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Support Request Details</h2>
+
+                        <p>
+                            View the complete information submitted through the support request form.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="support-request-details-card" id="supportRequestDetailsCard">
+
+                    <p class="details-placeholder">
+                        Select a support request to view its details.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- ================= SETTINGS SECTION ================= -->
+
+            <section class="settings-section" id="settingsSection">
+
+            <div class="settings-card">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Admin Settings</h2>
+
+                        <p>
+                            Manage your EABD administrator account and dashboard settings.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="settings-content">
+
+                    <h3>Administrator Information</h3>
+
+                    <p>
+                        You are currently signed in as the EABD administrator.
+                    </p>
+
+                    <p>
+                        <strong>Role:</strong> Administrator
+                    </p>
+
+                    <p>
+                        <strong>Access:</strong> Dashboard Management
+                    </p>
+
+                    <button class="logout-btn" id="settingsLogoutBtn">
+                        Log Out
+                    </button>
+
+                </div>
+
+            </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="admin.js"></script>
+
+</body>
+</html>
