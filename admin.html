@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EABD Admin Dashboard</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+     <link
+        rel="icon"
+        type="image/png"
+        href="images/eabd-logo.png.png"
+    >
+</head>
+
+<body>
+
+    <!-- ================= ADMIN DASHBOARD ================= -->
+
+    <div class="admin-container">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="admin-logo">
+                <img src="images/eabd-logo.png.png" alt="EABD Logo">
+            </div>
+
+            <nav class="admin-nav">
+
+                <a
+                    href="#"
+                    class="active"
+                    data-section="dashboard"
+                >
+                    Dashboard
+                </a>
+
+                <a
+                    href="#"
+                    data-section="applications"
+                >
+                    Support & Discovery
+                </a>
+
+                <a
+                    href="#"
+                    data-section="settings"
+                >
+                    Settings
+                </a>
+
+            </nav>
+
+            <button
+                class="logout-btn"
+                type="button"
+            >
+                Log Out
+            </button>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="dashboard-content">
+
+
+            <!-- ================= HEADER ================= -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>Admin Dashboard</h1>
+
+                    <p>
+                        Manage EABD Support & Discovery submissions.
+                    </p>
+
+                </div>
+
+                <button
+                    id="refreshDashboardBtn"
+                    class="refresh-dashboard-btn"
+                    type="button"
+                >
+                    Refresh Dashboard
+                </button>
+
+            </header>
+
+
+            <!-- ================= STATISTICS ================= -->
+
+            <section class="stats">
+
+                <div class="stat-card">
+
+                    <h3>Total Submissions</h3>
+
+                    <p id="totalApplications">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Pending</h3>
+
+                    <p id="pendingApplications">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Reviewed</h3>
+
+                    <p id="approvedApplications">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Contacted</h3>
+
+                    <p id="rejectedApplications">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>Support & Discovery</h3>
+
+                    <p id="supportRequests">
+                        0
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= RECENT ACTIVITY ================= -->
+
+            <section class="dashboard-activity">
+
+                <div class="activity-card">
+
+                    <h2>Recent Submissions</h2>
+
+                    <div
+                        class="activity-list"
+                        id="recentSupportRequests"
+                    >
+
+                        <p class="activity-empty">
+                            No recent submissions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-card">
+
+                    <h2>What EABD Is Learning</h2>
+
+                    <div class="activity-list">
+
+                        <div class="activity-item">
+
+                            <strong>
+                                Pathways
+                            </strong>
+
+                            <span>
+                                Review the interests and preferred pathways people are selecting.
+                            </span>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <strong>
+                                Support Needs
+                            </strong>
+
+                            <span>
+                                Understand the accessibility and participation support people request.
+                            </span>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <strong>
+                                Opportunities
+                            </strong>
+
+                            <span>
+                                Track the types of opportunities people want to pursue.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SUPPORT & DISCOVERY ================= -->
+
+            <section
+                class="applications-section"
+                id="applicationsSection"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            Support & Discovery
+                        </h2>
+
+                        <p>
+                            Review information submitted by people who want to explore their interests, abilities, goals, support needs, and possible pathways with EABD.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= SEARCH & FILTER ================= -->
+
+                <div class="application-search">
+
+                    <input
+                        type="text"
+                        id="applicationSearch"
+                        placeholder="Search by name, email, location, pathway..."
+                        aria-label="Search Support & Discovery submissions"
+                    >
+
+
+                    <select
+                        id="statusFilter"
+                        aria-label="Filter submissions by status"
+                    >
+
+                        <option value="all">
+                            All Statuses
+                        </option>
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                        <option value="reviewed">
+                            Reviewed
+                        </option>
+
+                        <option value="contacted">
+                            Contacted
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ================= SUBMISSIONS TABLE ================= -->
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Name
+                                </th>
+
+                                <th>
+                                    Age
+                                </th>
+
+                                <th>
+                                    Location
+                                </th>
+
+                                <th>
+                                    Preferred Pathway
+                                </th>
+
+                                <th>
+                                    Desired Opportunity
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="applicationsTableBody">
+
+                            <tr>
+
+                                <td
+                                    colspan="8"
+                                    class="empty-message"
+                                >
+                                    No Support & Discovery submissions yet.
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SUBMISSION DETAILS ================= -->
+
+            <section
+                class="application-details-section"
+                id="applicationDetailsSection"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            Submission Details
+                        </h2>
+
+                        <p>
+                            View the complete information submitted through the Support & Discovery form.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="application-details-card"
+                    id="applicationDetailsCard"
+                >
+
+                    <p class="details-placeholder">
+                        Select a submission to view its details.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SETTINGS ================= -->
+
+            <section
+                class="settings-section"
+                id="settingsSection"
+            >
+
+                <div class="settings-card">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>
+                                Admin Settings
+                            </h2>
+
+                            <p>
+                                Manage your EABD administrator account and dashboard settings.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="settings-content">
+
+                        <h3>
+                            Administrator Information
+                        </h3>
+
+                        <p>
+                            You are currently signed in as the EABD administrator.
+                        </p>
+
+                        <p>
+                            <strong>
+                                Role:
+                            </strong>
+                            Administrator
+                        </p>
+
+                        <p>
+                            <strong>
+                                Access:
+                            </strong>
+                            Dashboard Management
+                        </p>
+
+
+                        <button
+                            class="logout-btn"
+                            id="settingsLogoutBtn"
+                            type="button"
+                        >
+                            Log Out
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= SCRIPTS ================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase-config.js"></script>
+
+    <script src="admin.js"></script>
+
+</body>
+</html>

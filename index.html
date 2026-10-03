@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="EABD is developing a person-led model that helps young people with disabilities discover their interests, explore pathways, develop skills, and connect to opportunities."
+    >
+
+    <meta
+        name="theme-color"
+        content="#1E40AF"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/eabd-logo.png.png"
+    >
+
+    <title>EABD | Building Skills. Creating Opportunities.</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a
+        href="#home"
+        class="logo"
+        aria-label="EABD Home"
+    >
+
+        <img
+            src="images/eabd-logo.png.png"
+            alt="Empowering Ability Beyond Disability"
+        >
+
+    </a>
+
+
+    <nav
+        class="nav-links"
+        id="navLinks"
+        aria-label="Main navigation"
+    >
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#about">
+            About EABD
+        </a>
+
+        <a href="#approach">
+            Our Approach
+        </a>
+
+        <a href="#pathways">
+            Explore Pathways
+        </a>
+
+        <a href="#get-involved">
+            Get Involved
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <!-- RIGHT SIDE CONTROLS -->
+
+    <div class="nav-buttons">
+
+
+        <!-- ACCESSIBILITY BUTTON -->
+
+        <button
+            class="accessibility-btn"
+            id="accessibilityToggle"
+            type="button"
+            aria-label="Open accessibility settings"
+            aria-expanded="false"
+            aria-controls="accessibilityPanel"
+            title="Open accessibility settings"
+        >
+
+            <span aria-hidden="true">
+                ♿
+            </span>
+
+            <span>
+                Accessibility
+            </span>
+
+        </button>
+
+
+        <!-- GET INVOLVED -->
+
+        <a
+            href="#get-involved"
+            class="support-btn"
+        >
+            Get Involved
+        </a>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navLinks"
+        >
+
+            <span aria-hidden="true">
+                ☰
+            </span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+    <!-- ================= ACCESSIBILITY OVERLAY ================= -->
+
+    <div
+        class="accessibility-overlay"
+        id="accessibilityOverlay"
+        aria-hidden="true"
+    ></div>
+
+
+
+    <!-- ================= ACCESSIBILITY HUB ================= -->
+
+    <aside
+        class="accessibility-panel"
+        id="accessibilityPanel"
+        aria-label="Accessibility settings"
+        aria-hidden="true"
+        aria-labelledby="accessibility-title"
+    >
+
+
+        <div class="accessibility-header">
+
+            <div>
+
+                <span class="accessibility-label">
+                    ACCESSIBILITY
+                </span>
+
+                <h2 id="accessibility-title">
+                    Accessibility Hub
+                </h2>
+
+            </div>
+
+
+
+            <button
+                type="button"
+                class="accessibility-close"
+                id="accessibilityClose"
+                aria-label="Close accessibility settings"
+            >
+
+                <span aria-hidden="true">
+                    ×
+                </span>
+
+            </button>
+
+        </div>
+
+
+
+        <p class="accessibility-intro">
+
+            Adjust the website to make it easier to read,
+            navigate, and interact with.
+
+        </p>
+
+
+
+        <!-- ACCESSIBILITY STATUS -->
+
+        <div
+            class="accessibility-status"
+            aria-live="polite"
+            aria-atomic="true"
+            id="accessibilityStatus"
+        >
+            Accessibility settings ready.
+        </div>
+
+
+
+        <div class="accessibility-options">
+
+
+            <!-- ================= READ ALOUD ================= -->
+
+            <div class="accessibility-option accessibility-action">
+
+                <div class="accessibility-option-info">
+
+                    <span
+                        class="accessibility-option-icon"
+                        aria-hidden="true"
+                    >
+                        🔊
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Read Aloud
+                        </strong>
+
+                        <small>
+                            Read page content aloud
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <button
+                    type="button"
+                    class="accessibility-control"
+                    id="readAloudToggle"
+                    aria-pressed="false"
+                    aria-label="Start reading page aloud"
+                >
+
+                    <span class="read-aloud-status">
+                        Read
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= TEXT SIZE ================= -->
+
+            <div class="accessibility-option">
+
+                <div class="accessibility-option-info">
+
+                    <span
+                        class="accessibility-option-icon"
+                        aria-hidden="true"
+                    >
+                        🔠
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Text Size
+                        </strong>
+
+                        <small>
+                            Adjust text size
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    class="accessibility-choice-group"
+                    role="group"
+                    aria-label="Text size"
+                >
+
+                    <button
+                        type="button"
+                        class="accessibility-choice active"
+                        data-text-size="normal"
+                        aria-label="Normal text size"
+                        aria-pressed="true"
+                    >
+                        A
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="accessibility-choice"
+                        data-text-size="large"
+                        aria-label="Large text size"
+                        aria-pressed="false"
+                    >
+                        A+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="accessibility-choice"
+                        data-text-size="xl"
+                        aria-label="Extra large text size"
+                        aria-pressed="false"
+                    >
+                        A++
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= READING SPACING ================= -->
+
+            <div class="accessibility-option">
+
+                <div class="accessibility-option-info">
+
+                    <span
+                        class="accessibility-option-icon"
+                        aria-hidden="true"
+                    >
+                        ↔
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Reading Spacing
+                        </strong>
+
+                        <small>
+                            Increase text spacing
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <button
+                    type="button"
+                    class="accessibility-control"
+                    id="spacingToggle"
+                    aria-pressed="false"
+                    aria-label="Toggle reading spacing"
+                >
+
+                    <span class="toggle-status">
+                        OFF
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= HIGH CONTRAST ================= -->
+
+            <div class="accessibility-option">
+
+                <div class="accessibility-option-info">
+
+                    <span
+                        class="accessibility-option-icon"
+                        aria-hidden="true"
+                    >
+                        ◐
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            High Contrast
+                        </strong>
+
+                        <small>
+                            Increase visual contrast
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <button
+                    type="button"
+                    class="accessibility-control"
+                    id="contrastToggle"
+                    aria-pressed="false"
+                    aria-label="Toggle high contrast"
+                >
+
+                    <span class="toggle-status">
+                        OFF
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= DARK MODE ================= -->
+
+            <div class="accessibility-option">
+
+                <div class="accessibility-option-info">
+
+                    <span
+                        class="accessibility-option-icon"
+                        aria-hidden="true"
+                    >
+                        ◑
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Dark Mode
+                        </strong>
+
+                        <small>
+                            Switch website appearance
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <button
+                    type="button"
+                    class="accessibility-control"
+                    id="darkModeToggle"
+                    aria-pressed="false"
+                    aria-label="Toggle dark mode"
+                >
+
+                    <span class="toggle-status">
+                        OFF
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= FOCUS MODE ================= -->
+
+            <div class="accessibility-option">
+
+                <div class="accessibility-option-info">
+
+                    <span
+                        class="accessibility-option-icon"
+                        aria-hidden="true"
+                    >
+                        🎯
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Focus Mode
+                        </strong>
+
+                        <small>
+                            Make keyboard focus clearer
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <button
+                    type="button"
+                    class="accessibility-control"
+                    id="focusToggle"
+                    aria-pressed="false"
+                    aria-label="Toggle focus mode"
+                >
+
+                    <span class="toggle-status">
+                        OFF
+                    </span>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= REDUCE MOTION ================= -->
+
+            <div class="accessibility-option">
+
+                <div class="accessibility-option-info">
+
+                    <span
+                        class="accessibility-option-icon"
+                        aria-hidden="true"
+                    >
+                        🎞
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Reduce Motion
+                        </strong>
+
+                        <small>
+                            Reduce animations
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <button
+                    type="button"
+                    class="accessibility-control"
+                    id="motionToggle"
+                    aria-pressed="false"
+                    aria-label="Toggle reduced motion"
+                >
+
+                    <span class="toggle-status">
+                        OFF
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= RESET ================= -->
+
+        <button
+            type="button"
+            class="accessibility-reset"
+            id="accessibilityReset"
+        >
+            Reset Accessibility Settings
+        </button>
+
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main-content">
+
+
+        <!-- ================= HERO ================= -->
+
+        <section
+            class="hero"
+            id="home"
+            aria-labelledby="hero-title"
+        >
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    Building Skills. Creating Opportunities.
+                </span>
+
+
+
+                <h1 id="hero-title">
+
+                    Your ability.
+                    <span>Your pathway.</span>
+                    Your opportunity.
+
+                </h1>
+
+
+
+                <p>
+
+                    EABD is developing a person-led approach that
+                    starts by discovering what young people with
+                    disabilities are interested in, exploring what
+                    they could pursue, and building pathways toward
+                    skills and opportunity.
+
+                </p>
+
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#approach"
+                        class="primary-btn"
+                    >
+                        Explore Our Approach
+                    </a>
+
+
+                    <a
+                        href="#get-involved"
+                        class="secondary-btn"
+                    >
+                        Get Involved
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="hero-image"
+                aria-hidden="true"
+            >
+
+                <div class="image-placeholder">
+
+                    <span>
+                        Discover • Explore • Develop • Connect
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section
+            class="about"
+            id="about"
+            aria-labelledby="about-title"
+        >
+
+            <div class="section-heading">
+
+                <span>
+                    ABOUT EABD
+                </span>
+
+
+
+                <h2 id="about-title">
+
+                    Start with the person.
+                    Then explore the possibilities.
+
+                </h2>
+
+
+
+                <p>
+
+                    Empowering Ability Beyond Disability (EABD) is
+                    a Nigeria-focused initiative being developed to
+                    explore a more person-led approach to skills and
+                    opportunity for young people with disabilities.
+
+                </p>
+
+
+
+                <p>
+
+                    Rather than beginning with a predetermined
+                    programme, EABD begins by asking what a person
+                    is interested in, what they can do, what they
+                    want to achieve, and what support could help
+                    them participate.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="about-cards">
+
+
+                <article class="about-card">
+
+                    <div
+                        class="card-icon"
+                        aria-hidden="true"
+                    >
+                        01
+                    </div>
+
+
+                    <h3>
+                        Discover
+                    </h3>
+
+
+                    <p>
+
+                        Discover interests, abilities, goals,
+                        experiences, and support needs.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="about-card">
+
+                    <div
+                        class="card-icon"
+                        aria-hidden="true"
+                    >
+                        02
+                    </div>
+
+
+                    <h3>
+                        Explore
+                    </h3>
+
+
+                    <p>
+
+                        Explore different possibilities and
+                        pathways based on what the person wants
+                        to pursue.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="about-card">
+
+                    <div
+                        class="card-icon"
+                        aria-hidden="true"
+                    >
+                        03
+                    </div>
+
+
+                    <h3>
+                        Develop
+                    </h3>
+
+
+                    <p>
+
+                        Build relevant skills around the person's
+                        interests, goals, and support needs.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="about-card">
+
+                    <div
+                        class="card-icon"
+                        aria-hidden="true"
+                    >
+                        04
+                    </div>
+
+
+                    <h3>
+                        Connect
+                    </h3>
+
+
+                    <p>
+
+                        Connect skills and goals with possible
+                        opportunities and next steps.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= WHY THIS MATTERS ================= -->
+
+        <section
+            class="impact"
+            aria-labelledby="why-title"
+        >
+
+            <div class="impact-content">
+
+                <span>
+                    WHY THIS MATTERS
+                </span>
+
+
+                <h2 id="why-title">
+                    Access to training is only part of the journey.
+                </h2>
+
+
+                <p>
+
+                    Research in Nigeria has documented barriers
+                    affecting young people with disabilities,
+                    including limited skills and employment
+                    opportunities, accessibility barriers,
+                    financial constraints, the cost of assistive
+                    products, and social attitudes.
+
+                </p>
+
+
+                <p>
+
+                    Research has also highlighted a gap between
+                    the aspirations of young people with
+                    disabilities and the opportunities available
+                    to them.
+
+                </p>
+
+
+                <a
+                    href="#approach"
+                    class="secondary-btn"
+                >
+                    See What EABD Is Exploring
+                </a>
+
+            </div>
+
+
+
+            <div
+                class="impact-stats"
+                aria-label="Key statistics"
+            >
+
+                <div class="stat">
+
+                    <h3>
+                        36.7%
+                    </h3>
+
+                    <p>
+                        Labour-force participation among people
+                        with disabilities in Nigeria, compared
+                        with 80.0% among people without disabilities.
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <h3>
+                        35.7%
+                    </h3>
+
+                    <p>
+                        Employment-to-population ratio among people
+                        with disabilities, compared with 76.6%
+                        among people without disabilities.
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <h3>
+                        50.5%
+                    </h3>
+
+                    <p>
+                        NEET rate among people with disabilities
+                        aged 15–24, compared with 12.3% among
+                        those without disabilities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= APPROACH ================= -->
+
+        <section
+            class="programs"
+            id="approach"
+            aria-labelledby="approach-title"
+        >
+
+            <div class="section-heading">
+
+                <span>
+                    OUR APPROACH
+                </span>
+
+
+                <h2 id="approach-title">
+                    The pathway begins with discovery.
+                </h2>
+
+
+                <p>
+
+                    EABD is developing and testing a model that
+                    starts with the individual before deciding
+                    what skills or pathway may fit.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="program-grid">
+
+
+                <article class="program-card">
+
+                    <span
+                        class="program-number"
+                        aria-hidden="true"
+                    >
+                        01
+                    </span>
+
+
+                    <h3>
+                        Discover
+                    </h3>
+
+
+                    <p>
+
+                        What interests the person?
+                        What are their abilities, goals,
+                        experiences, and support needs?
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="program-card">
+
+                    <span
+                        class="program-number"
+                        aria-hidden="true"
+                    >
+                        02
+                    </span>
+
+
+                    <h3>
+                        Explore
+                    </h3>
+
+
+                    <p>
+
+                        Explore possible directions and
+                        pathways connected to their interests
+                        and goals.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="program-card">
+
+                    <span
+                        class="program-number"
+                        aria-hidden="true"
+                    >
+                        03
+                    </span>
+
+
+                    <h3>
+                        Develop
+                    </h3>
+
+
+                    <p>
+
+                        Develop relevant skills through an
+                        accessible and person-centred approach.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="program-card">
+
+                    <span
+                        class="program-number"
+                        aria-hidden="true"
+                    >
+                        04
+                    </span>
+
+
+                    <h3>
+                        Connect
+                    </h3>
+
+
+                    <p>
+
+                        Connect skills and goals to possible
+                        employment, enterprise, freelancing,
+                        education, or other opportunities.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+
+
+            <div class="approach-principle">
+
+                <span>
+                    OUR DESIGN PRINCIPLE
+                </span>
+
+
+                <h3>
+
+                    Disability informs the accommodation.
+                    Interest informs the pathway.
+
+                </h3>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PATHWAYS ================= -->
+
+        <section
+            class="about"
+            id="pathways"
+            aria-labelledby="pathways-title"
+        >
+
+            <div class="section-heading">
+
+                <span>
+                    PATHWAYS TO EXPLORE
+                </span>
+
+
+                <h2 id="pathways-title">
+                    Interests can open different pathways.
+                </h2>
+
+
+                <p>
+
+                    These are proposed pathways within the EABD
+                    model. They are not fixed programmes or
+                    categories that determine what someone should
+                    pursue.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="about-cards">
+
+
+                <article class="about-card">
+
+                    <div
+                        class="card-icon"
+                        aria-hidden="true"
+                    >
+                        01
+                    </div>
+
+
+                    <h3>
+                        Creative Skills
+                    </h3>
+
+
+                    <p>
+
+                        Explore creative interests and skills
+                        that may lead toward freelancing,
+                        enterprise, further learning, or other
+                        opportunities.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="about-card">
+
+                    <div
+                        class="card-icon"
+                        aria-hidden="true"
+                    >
+                        02
+                    </div>
+
+
+                    <h3>
+                        Communication Skills
+                    </h3>
+
+
+                    <p>
+
+                        Explore communication-related skills
+                        that can support participation, learning,
+                        work, and everyday life.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="about-card">
+
+                    <div
+                        class="card-icon"
+                        aria-hidden="true"
+                    >
+                        03
+                    </div>
+
+
+                    <h3>
+                        Vocational Skills
+                    </h3>
+
+
+                    <p>
+
+                        Explore practical skills connected to
+                        individual interests and potential
+                        livelihood pathways.
+
+                    </p>
+
+                </article>
+
+
+
+                <article class="about-card">
+
+                    <div
+                        class="card-icon"
+                        aria-hidden="true"
+                    >
+                        04
+                    </div>
+
+
+                    <h3>
+                        Digital Skills
+                    </h3>
+
+
+                    <p>
+
+                        Explore digital skills that may support
+                        education, employment, freelancing,
+                        entrepreneurship, and participation.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= WHO IT IS FOR ================= -->
+
+        <section
+            class="impact"
+            aria-labelledby="who-title"
+        >
+
+            <div class="impact-content">
+
+                <span>
+                    WHO WE ARE BUILDING FOR
+                </span>
+
+
+                <h2 id="who-title">
+                    Young people with disabilities, aged 13–35.
+                </h2>
+
+
+                <p>
+
+                    People are not defined by a diagnosis,
+                    impairment, or predefined skill category.
+                    They have different interests, abilities,
+                    goals, experiences, and support needs.
+
+                </p>
+
+
+                <p>
+
+                    EABD is exploring how those individual
+                    differences can shape a more relevant
+                    pathway toward skills and opportunity.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="impact-stats">
+
+                <div class="stat">
+
+                    <h3>
+                        Interests
+                    </h3>
+
+                    <p>
+                        What is the person curious about?
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <h3>
+                        Abilities
+                    </h3>
+
+                    <p>
+                        What can the person build on?
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <h3>
+                        Goals
+                    </h3>
+
+                    <p>
+                        What does the person want to achieve?
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <h3>
+                        Support
+                    </h3>
+
+                    <p>
+                        What could make participation easier?
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PRE-PILOT ================= -->
+
+        <section
+            class="stories"
+            aria-labelledby="pilot-title"
+        >
+
+            <div class="section-heading">
+
+                <span>
+                    WHERE WE ARE NOW
+                </span>
+
+
+                <h2 id="pilot-title">
+                    EABD is currently in the pre-pilot stage.
+                </h2>
+
+
+                <p>
+
+                    We are researching, listening, refining the
+                    model, and preparing to test what works with
+                    the people and organisations closest to the
+                    problem.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="story-placeholder">
+
+                <h3>
+                    We are building with people, not just for people.
+                </h3>
+
+
+                <p>
+
+                    The next stage is about learning from young
+                    people with disabilities, families, organisations,
+                    practitioners, educators, employers, and other
+                    stakeholders before scaling the model.
+
+                </p>
+
+
+                <a
+                    href="#get-involved"
+                    class="primary-btn"
+                >
+                    Be Part of the Journey
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= GET INVOLVED ================= -->
+
+        <section
+            class="get-involved"
+            id="get-involved"
+            aria-labelledby="involved-title"
+        >
+
+            <div class="involved-content">
+
+                <span>
+                    GET INVOLVED
+                </span>
+
+
+                <h2 id="involved-title">
+                    Help us learn what works.
+                </h2>
+
+
+                <p>
+
+                    EABD is looking to connect with young people
+                    with disabilities, families, organisations,
+                    mentors, trainers, employers, volunteers,
+                    and partners who can help shape the next stage.
+
+                </p>
+
+
+                <a
+                    href="support-request.html"
+                    class="primary-btn"
+                >
+                    Share Your Interest
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section
+            class="contact"
+            id="contact"
+            aria-labelledby="contact-title"
+        >
+
+            <div class="section-heading">
+
+                <span>
+                    CONTACT EABD
+                </span>
+
+
+                <h2 id="contact-title">
+                    Let's build better pathways together.
+                </h2>
+
+
+                <p>
+
+                    Have a question, partnership idea, research
+                    contribution, or want to learn more about EABD?
+
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-info">
+
+
+                <div>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+                        <a
+                            href="mailto:empowerabilitybeyonddisability@gmail.com"
+                        >
+                            empowerabilitybeyonddisability@gmail.com
+                        </a>
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <h3>
+                        Location
+                    </h3>
+
+                    <p>
+                        Nigeria
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="contact-action">
+
+                <a
+                    href="support-request.html"
+                    class="primary-btn"
+                >
+                    Contact EABD
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="#home"
+                    class="logo"
+                    aria-label="Return to EABD home"
+                >
+
+                    <img
+                        src="images/eabd-logo.png.png"
+                        alt="Empowering Ability Beyond Disability"
+                    >
+
+                </a>
+
+
+                <p>
+                    Building Skills. Creating Opportunities.
+                </p>
+
+            </div>
+
+
+
+            <nav
+                class="footer-links"
+                aria-label="Footer navigation"
+            >
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About EABD
+                </a>
+
+                <a href="#approach">
+                    Our Approach
+                </a>
+
+                <a href="#pathways">
+                    Pathways
+                </a>
+
+                <a href="#get-involved">
+                    Get Involved
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 EABD. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

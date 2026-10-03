@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Support & Discovery | EABD</title>
+
+    <!-- FAVICON -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/eabd-logo.png.png"
+    >
+
+    <!-- STYLESHEET -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header class="navbar">
+
+         <a
+                href="#home"
+                class="logo"
+                aria-label="EABD Home"
+            >
+
+                <img
+                    src="images/eabd-logo.png.png"
+                    alt="Empowering Ability Beyond Disability"
+                >
+
+            </a>
+
+
+        <nav
+            class="nav-links"
+            id="navLinks"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="programs.html">
+                Programs
+            </a>
+
+            <a href="support.html">
+                Support
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- RIGHT SIDE CONTROLS -->
+
+        <div class="nav-buttons">
+
+
+            <!-- ACCESSIBILITY BUTTON -->
+
+            <button
+                class="accessibility-btn"
+                id="accessibilityToggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="accessibilityPanel"
+            >
+
+                <span aria-hidden="true">
+                    ♿
+                </span>
+
+                <span>
+                    Accessibility
+                </span>
+
+            </button>
+
+
+            <!-- GET STARTED -->
+
+            <a
+                href="support-request.html"
+                class="get-started-btn"
+            >
+                Get Started
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         ACCESSIBILITY OVERLAY
+    ========================= -->
+
+    <div
+        class="accessibility-overlay"
+        id="accessibilityOverlay"
+        aria-hidden="true"
+    ></div>
+
+
+
+    <!-- =========================
+         ACCESSIBILITY PANEL
+    ========================= -->
+
+    <aside
+        class="accessibility-panel"
+        id="accessibilityPanel"
+        aria-hidden="true"
+        aria-label="Accessibility settings"
+    >
+
+        <div class="accessibility-panel-header">
+
+            <div>
+
+                <h2>
+                    Accessibility
+                </h2>
+
+                <p>
+                    Adjust the website to make it easier
+                    for you to read, focus, and navigate.
+                </p>
+
+            </div>
+
+
+            <button
+                class="accessibility-close"
+                id="accessibilityClose"
+                type="button"
+                aria-label="Close accessibility settings"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+
+        <!-- TEXT SIZE -->
+
+        <div class="accessibility-group">
+
+            <span class="accessibility-group-title">
+                Text Size
+            </span>
+
+
+            <div class="accessibility-options">
+
+                <button
+                    class="accessibility-option"
+                    type="button"
+                    data-text-size="normal"
+                    aria-pressed="false"
+                >
+                    Normal
+                </button>
+
+
+                <button
+                    class="accessibility-option"
+                    type="button"
+                    data-text-size="large"
+                    aria-pressed="false"
+                >
+                    Large
+                </button>
+
+
+                <button
+                    class="accessibility-option"
+                    type="button"
+                    data-text-size="xl"
+                    aria-pressed="false"
+                >
+                    Extra Large
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DISPLAY -->
+
+        <div class="accessibility-group">
+
+            <span class="accessibility-group-title">
+                Display
+            </span>
+
+
+            <div class="accessibility-options">
+
+
+                <button
+                    class="accessibility-option"
+                    id="spacingToggle"
+                    type="button"
+                    aria-pressed="false"
+                >
+
+                    <span>
+                        Reading Spacing
+                    </span>
+
+                    <strong class="toggle-status">
+                        OFF
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="accessibility-option"
+                    id="contrastToggle"
+                    type="button"
+                    aria-pressed="false"
+                >
+
+                    <span>
+                        High Contrast
+                    </span>
+
+                    <strong class="toggle-status">
+                        OFF
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="accessibility-option"
+                    id="darkModeToggle"
+                    type="button"
+                    aria-pressed="false"
+                >
+
+                    <span>
+                        Dark Mode
+                    </span>
+
+                    <strong class="toggle-status">
+                        OFF
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="accessibility-option"
+                    id="focusToggle"
+                    type="button"
+                    aria-pressed="false"
+                >
+
+                    <span>
+                        Focus Mode
+                    </span>
+
+                    <strong class="toggle-status">
+                        OFF
+                    </strong>
+
+                </button>
+
+
+                <button
+                    class="accessibility-option"
+                    id="motionToggle"
+                    type="button"
+                    aria-pressed="false"
+                >
+
+                    <span>
+                        Reduce Motion
+                    </span>
+
+                    <strong class="toggle-status">
+                        OFF
+                    </strong>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- READ ALOUD -->
+
+        <div class="accessibility-group">
+
+            <span class="accessibility-group-title">
+                Read Aloud
+            </span>
+
+
+            <button
+                class="read-aloud-control"
+                id="readAloudToggle"
+                type="button"
+                aria-pressed="false"
+            >
+
+                <span class="read-aloud-control-text">
+
+                    <strong>
+                        Read Page Aloud
+                    </strong>
+
+                    <span>
+                        Uses your browser's speech feature.
+                    </span>
+
+                </span>
+
+
+                <span class="read-aloud-status">
+                    Ready
+                </span>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- RESET -->
+
+        <div class="accessibility-group">
+
+            <button
+                class="accessibility-reset"
+                id="accessibilityReset"
+                type="button"
+            >
+                Reset Accessibility Settings
+            </button>
+
+
+            <p class="accessibility-note">
+                Your accessibility preferences are saved
+                on this device.
+            </p>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         SUPPORT REQUEST PAGE
+    ========================= -->
+
+    <main>
+
+        <section class="support-request-page">
+
+            <div class="support-request-container">
+
+
+                <div class="support-request-intro">
+
+                    <span class="section-label">
+                        EABD Support & Discovery
+                    </span>
+
+
+                    <h1>
+                        Tell Us About Yourself
+                    </h1>
+
+
+                    <p>
+                        We want to understand your interests,
+                        abilities, goals, and the support you may
+                        need so we can better understand how EABD
+                        could support your journey.
+                    </p>
+
+
+                    <p>
+                        You do not need to know which pathway is
+                        right for you yet. We can explore that
+                        together.
+                    </p>
+
+                </div>
+
+
+
+                <!-- =========================
+                     FORM
+                ========================= -->
+
+                <form id="supportRequestForm">
+
+
+                    <!-- ABOUT YOU -->
+
+                    <fieldset>
+
+                        <legend>
+                            About You
+                        </legend>
+
+
+                        <div class="form-group">
+
+                            <label for="requestName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="requestName"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="requestAge">
+                                    Age
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="requestAge"
+                                    name="age"
+                                    min="13"
+                                    max="35"
+                                    placeholder="Your age"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="requestLocation">
+                                    Location
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="requestLocation"
+                                    name="location"
+                                    placeholder="City / State"
+                                    autocomplete="address-level2"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="requestEmail">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="requestEmail"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="requestPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="requestPhone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                autocomplete="tel"
+                            >
+
+                        </div>
+
+                    </fieldset>
+
+
+
+                    <!-- INTERESTS AND ABILITIES -->
+
+                    <fieldset>
+
+                        <legend>
+                            Your Interests & Abilities
+                        </legend>
+
+
+                        <div class="form-group">
+
+                            <label for="requestInterests">
+                                What are you interested in?
+                            </label>
+
+                            <textarea
+                                id="requestInterests"
+                                name="interests"
+                                rows="4"
+                                placeholder="Tell us about things you enjoy, subjects you like, activities you are interested in, or things you would like to explore."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="requestAbilities">
+                                What do you feel you are good at?
+                            </label>
+
+                            <textarea
+                                id="requestAbilities"
+                                name="abilities"
+                                rows="4"
+                                placeholder="Tell us about skills, talents, strengths, or things you can already do."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="requestExperience">
+                                What skills or experience do you already have?
+                            </label>
+
+                            <textarea
+                                id="requestExperience"
+                                name="currentSkills"
+                                rows="4"
+                                placeholder="Tell us about any skills, training, school, work, volunteering, or other experience you have."
+                            ></textarea>
+
+                        </div>
+
+                    </fieldset>
+
+
+
+                    <!-- GOALS -->
+
+                    <fieldset>
+
+                        <legend>
+                            Your Goals
+                        </legend>
+
+
+                        <div class="form-group">
+
+                            <label for="requestGoals">
+                                What would you like to achieve?
+                            </label>
+
+                            <textarea
+                                id="requestGoals"
+                                name="goals"
+                                rows="5"
+                                placeholder="Tell us what you would like to learn, improve, become, or achieve."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="requestOpportunity">
+                                What kind of opportunity are you hoping to work towards?
+                            </label>
+
+                            <select
+                                id="requestOpportunity"
+                                name="opportunity"
+                            >
+
+                                <option value="">
+                                    Select an option
+                                </option>
+
+                                <option value="employment">
+                                    Employment
+                                </option>
+
+                                <option value="self-employment">
+                                    Self-employment
+                                </option>
+
+                                <option value="entrepreneurship">
+                                    Starting a business
+                                </option>
+
+                                <option value="freelancing">
+                                    Freelancing
+                                </option>
+
+                                <option value="education">
+                                    Further education or training
+                                </option>
+
+                                <option value="exploration">
+                                    I am still exploring
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </fieldset>
+
+
+
+                    <!-- PATHWAY -->
+
+                    <fieldset>
+
+                        <legend>
+                            Explore Your Interests
+                        </legend>
+
+
+                        <p class="form-help">
+                            You do not need to know your pathway yet.
+                            Choose an area only if you already have one
+                            in mind.
+                        </p>
+
+
+                        <div class="form-group">
+
+                            <label for="requestPathway">
+                                Which area are you currently most interested in?
+                            </label>
+
+                            <select
+                                id="requestPathway"
+                                name="preferredPathway"
+                            >
+
+                                <option value="">
+                                    I am not sure yet
+                                </option>
+
+                                <option value="creative">
+                                    Creative Skills
+                                </option>
+
+                                <option value="communication">
+                                    Communication Skills
+                                </option>
+
+                                <option value="vocational">
+                                    Vocational Skills
+                                </option>
+
+                                <option value="digital">
+                                    Digital Skills
+                                </option>
+
+                                <option value="multiple">
+                                    More than one area
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="requestPathwayReason">
+                                What makes you interested in this area?
+                            </label>
+
+                            <textarea
+                                id="requestPathwayReason"
+                                name="pathwayReason"
+                                rows="4"
+                                placeholder="Tell us what interests you about this area."
+                            ></textarea>
+
+                        </div>
+
+                    </fieldset>
+
+
+
+                    <!-- SUPPORT NEEDS -->
+
+                    <fieldset>
+
+                        <legend>
+                            Support & Accessibility Needs
+                        </legend>
+
+
+                        <div class="form-group">
+
+                            <label for="requestSupportNeeds">
+                                What support would help you participate or learn more easily?
+                            </label>
+
+                            <textarea
+                                id="requestSupportNeeds"
+                                name="supportNeeds"
+                                rows="5"
+                                placeholder="Tell us about any communication, learning, physical, technology, transportation, or other support you may need."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="requestAccommodation">
+                                Is there anything we should know to make communication or participation more accessible for you?
+                            </label>
+
+                            <textarea
+                                id="requestAccommodation"
+                                name="accessibilityNeeds"
+                                rows="4"
+                                placeholder="Tell us about any preferences or adjustments that would help you participate."
+                            ></textarea>
+
+                        </div>
+
+                    </fieldset>
+
+
+
+                    <!-- BARRIERS -->
+
+                    <fieldset>
+
+                        <legend>
+                            What Is Getting in the Way?
+                        </legend>
+
+
+                        <div class="form-group">
+
+                            <label for="requestBarriers">
+                                What challenges are making it difficult to reach your goals?
+                            </label>
+
+                            <textarea
+                                id="requestBarriers"
+                                name="barriers"
+                                rows="5"
+                                placeholder="Tell us about anything that is making it difficult to learn, develop your skills, or access opportunities."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="requestHelp">
+                                What kind of support are you hoping EABD can provide?
+                            </label>
+
+                            <textarea
+                                id="requestHelp"
+                                name="requestedSupport"
+                                rows="5"
+                                placeholder="Tell us what you would like help with."
+                                required
+                            ></textarea>
+
+                        </div>
+
+                    </fieldset>
+
+
+
+                    <!-- ADDITIONAL INFORMATION -->
+
+                    <fieldset>
+
+                        <legend>
+                            Anything Else?
+                        </legend>
+
+
+                        <div class="form-group">
+
+                            <label for="requestAdditional">
+                                Is there anything else you would like us to know?
+                            </label>
+
+                            <textarea
+                                id="requestAdditional"
+                                name="additionalInformation"
+                                rows="5"
+                                placeholder="Share anything else that may help us understand your interests, goals, or support needs."
+                            ></textarea>
+
+                        </div>
+
+                    </fieldset>
+
+
+
+                    <!-- CONSENT -->
+
+                    <div class="form-consent">
+
+                        <label class="checkbox-label">
+
+                            <input
+                                type="checkbox"
+                                id="requestConsent"
+                                name="consent"
+                                required
+                            >
+
+                            <span>
+                                I understand that the information I provide
+                                will be used by EABD to understand my request
+                                and explore how we may be able to support me.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="form-submit"
+                    >
+                        Submit Support Request
+                    </button>
+
+
+                    <p class="form-note">
+                        Submitting this form does not guarantee placement
+                        in a programme, training opportunity, employment,
+                        or other opportunity. It helps EABD understand
+                        your needs and explore possible next steps.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         SCRIPTS
+    ========================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase-config.js"></script>
+
+    <script src="support-request.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
